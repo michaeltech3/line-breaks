@@ -1,0 +1,29 @@
+<!-- Embeddable Form -->
+
+    <div style="border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9; display: inline-block; text-align: center;">
+        <h5>Type Instagram text and make line breaks</h5>
+        <textarea id="paragraphInput" rows="4" cols="50" placeholder="Enter or paste your paragraph here..." style="background-color: white; width: 80%;"></textarea>
+        <br><br>
+        <button class="affiliate-button-1" onclick="copyToClipboard()" style="margin-right: 10px;">Copy</button>
+        <button class="affiliate-button-1" onclick="eraseText()">Erase</button>
+    
+</div>
+
+<script>
+    function copyToClipboard() {
+        // Get the textarea content
+        let textarea = document.getElementById("paragraphInput");
+        
+        // Select the content
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+        
+        // Copy the selected content
+        document.execCommand("copy");
+    }
+
+    function eraseText() {
+        // Erase the content of the textarea
+        document.getElementById("paragraphInput").value = "";
+    }
+</script>
